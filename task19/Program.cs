@@ -3,24 +3,22 @@
 
 using System;
 
-int n, reversed = 0, remainder, original;
+int a, b, d;
 
-Console.Write("Введите целое число:");
-n = Convert.ToInt64(Console.ReadLine());
-original = n;
+Console.Write("Введите первое число из трехзначного числа:");
+a = Convert.ToInt32(Console.ReadLine());
 
-while( n != 0 )
+Console.Write("Введите второе число из трехзначного числа:");
+b = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите третье число из трехзначного числа:");
+d = Convert.ToInt32(Console.ReadLine());
+
+if(a == d)
 {
-    remainder = n % 10;
-    reversed = reversed * 10 + remainder;
-    n = 10;
-}
-
-if(original == reversed)
-{
-    Console.WriteLine(original + " палиндром");
+    Console.WriteLine("Число - палиндром");
 }
 else 
 {
-    Console.WriteLine(original + " не палиндром");
+    Console.WriteLine("Число - не палиндром");
 }
